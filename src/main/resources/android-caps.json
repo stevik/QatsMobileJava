@@ -1,0 +1,8 @@
+{
+  "platformName": "android",
+  "appium:automationName": "uiautomator2",
+  "appium:platformVersion": "13",
+  "appium:deviceName": "Galaxy S20FE API 33",
+  "app": "src/test/resources/Google Calculator_8.4.1.apk",
+  "appium:appPackage": "com.google.android.calculator"
+}
