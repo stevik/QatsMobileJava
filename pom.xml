@@ -11,6 +11,8 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <jackson-databind.version>2.15.2</jackson-databind.version>
         <selenium-server.version>3.141.59</selenium-server.version>
         <selenium-java.version>4.10.0</selenium-java.version>
@@ -45,7 +47,7 @@
                 <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <includes>
-                        <include>**/CalculatorTest.class</include>
+                        <include>**/CalculatorTest.*</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -107,11 +109,6 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>${allure-junit5.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback-classic.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

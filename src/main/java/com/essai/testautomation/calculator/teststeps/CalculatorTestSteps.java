@@ -54,12 +54,12 @@ public class CalculatorTestSteps {
 
     public void verifyDivisionOperationBeforeEquals(BigDecimal a, BigDecimal b, String previewText, String formulaText) {
         assertAll("Verification of Division before Equals is clicked",
-                () -> assertThat(PREVIEW, new BigDecimal(previewText), is(a.divide(b, MC))),
+                () -> assertThat(PREVIEW, new BigDecimal(previewText, MC), is(a.divide(b, MC))),
                 () -> assertThat(FORMULA, formulaText, Matchers.is("" + a + GeneralConstants.UNICODE_DIVISION + b)));
     }
 
     public void verifyDivisionOperationAfterEquals(BigDecimal a, BigDecimal b, String finalResult) {
         assertAll("Verification of Division after Equals is clicked",
-                () -> assertThat(FINAL_RESULT, new BigDecimal(finalResult), is(a.divide(b, MC))));
+                () -> assertThat(FINAL_RESULT, new BigDecimal(finalResult, MC), is(a.divide(b, MC))));
     }
 }
